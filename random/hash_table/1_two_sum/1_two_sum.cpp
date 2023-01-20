@@ -1,0 +1,24 @@
+#include <vector>;
+#include <unordered_map>;
+using namespace std;
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> hash;
+        int numsSize = nums.size();
+        int complement;
+
+        for (int i = 0; i < numsSize; i++) {
+           complement = target - nums[i]; 
+
+            if (hash.find(complement) != hash.end())
+                return {i, hash[complement]};
+
+            else 
+                hash[nums[i]] = i;
+        }
+
+        return {-1, -1};
+    }
+};
