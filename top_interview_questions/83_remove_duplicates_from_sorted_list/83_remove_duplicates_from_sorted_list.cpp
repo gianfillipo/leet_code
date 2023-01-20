@@ -11,6 +11,10 @@
         As the current value is equal to the next, we will point its next to the next of the next node
         1 - 1 - 2 - 2 - 4
         1 - 2 - 4
+
+        Time Complexity: O(n)
+        Space Complexity: O(1)
+
 */
 
 
